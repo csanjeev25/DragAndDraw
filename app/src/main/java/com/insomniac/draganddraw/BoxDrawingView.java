@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by DELL on 1/10/2018.
+ * Created by Sanjeev on 1/10/2018.
  */
 
 public class BoxDrawingView extends View
@@ -117,9 +117,7 @@ public class BoxDrawingView extends View
     }
 
     @Override
-    protected void onDraw(Canvas canvas)
-    {
-        // Заполнение фона
+    protected void onDraw(Canvas canvas) {
         canvas.drawPaint(mBackgroundPaint);
         for (Box box:mBoxes){
             Path path = new Path();
@@ -133,8 +131,7 @@ public class BoxDrawingView extends View
     }
 
     @Override
-    protected Parcelable onSaveInstanceState()
-    {
+    protected Parcelable onSaveInstanceState() {
         Parcelable savedState = super.onSaveInstanceState();
         Bundle bundle = new Bundle();
         bundle.putParcelable("savedState", savedState);
